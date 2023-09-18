@@ -29,30 +29,27 @@ void add_data()
 void search_data()
 {
 
-	printf("enter a word to search for :  \n");
+	printf("entrez un mot à rechercher:  \n");
 	scanf("%s", word);
 
 	for (i = 0; i < count; i++)
 	{
 		if (strcmp(words[i], word) == 0)
         {
-             printf("votre mot se trouve ici %d: \n", i + 1);
+             printf("ur word is here %d: \n", i + 1);
              return;
         } 
     }
-		
-           
-		
-			printf("mot introuvable ici \n");
+			printf("mot introuvable\n");
 	}
-    void del_data()
+    /*void del_data()
     {
-        
-    }
+
+    }*/
 int main()
 {
     int choix;
-  while(1) 
+  do
     {
     printf("==================================================================================\n");
     printf("                                Menu d'application\n");                                          
@@ -79,5 +76,6 @@ break;
 break;
     }
     }
+    while (choix >= 1  && choix <= 7);
     return (0);
 }
